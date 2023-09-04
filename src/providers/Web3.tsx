@@ -5,7 +5,7 @@ import { ETH_CHAINS, THEME_COLOR_SCHEME } from 'utils/config'
 import { useColorMode } from '@chakra-ui/react'
 import { ReactNode, useEffect, useState } from 'react'
 import { Web3Modal } from '@web3modal/react'
-
+import landingImg from 'assets/landing.png'
 interface Props {
   children: ReactNode
 }
@@ -43,6 +43,9 @@ export function Web3Provider(props: Props) {
         themeMode={colorMode}
         themeVariables={{
           '--w3m-accent-color': THEME_COLOR_SCHEME,
+          '--w3m-font-family': "'IBM Plex Mono', monospace",
+          '--w3m-logo-image-url': landingImg.src,
+          '--w3m-background-color': '#EEF2F6',
         }}
       />
     </>
